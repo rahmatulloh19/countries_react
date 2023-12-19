@@ -1,0 +1,34 @@
+@use "../../../scss/mixins.scss" as m;
+
+.main-list__item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
+}
+
+.main-list__img {
+  width: 264px;
+  height: 160px;
+  object-fit: fill;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.main-list__inner {
+  padding: 24px;
+  padding-bottom: 46px;
+  flex-grow: 1;
+}
+
+.main-list__subtitle {
+  @include m.default-text(16px, 18px, 800, 26px);
+}
+
+.main-list__desc {
+  @include m.default-text(8px, 14px, 300, 16px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

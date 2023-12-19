@@ -1,0 +1,48 @@
+@use "../../../scss/mixins.scss" as m;
+
+.search {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.search__form-inner {
+  @include m.flex-box;
+}
+
+.search__label {
+  @include m.flex-box(flex-start);
+  column-gap: 24px;
+  max-width: 480px;
+  width: 100%;
+  padding-left: 32px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+}
+
+.search__button {
+  @include m.unstyled-button;
+}
+
+.search__input {
+  @include m.unstyled-button;
+  flex-grow: 1;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-right: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  outline: none;
+}
+
+.search__select {
+  @include m.unstyled-button;
+  padding: 18px 24px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #111517;
+  outline: none;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+}

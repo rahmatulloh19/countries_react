@@ -1,0 +1,50 @@
+@mixin flex-box($jc: space-between, $ai: center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin unstyled-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+@mixin default-text($mb: 0, $fz: 16px, $fw: 400, $lh, $c: #111517) {
+  margin-top: 0;
+  margin-bottom: $mb;
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+  color: $c;
+}
+
+@mixin default-text-link(
+  $d: inline-block,
+  $mb: 0,
+  $fz: 16px,
+  $fw: 400,
+  $lh,
+  $c: #111517
+) {
+  display: $d;
+  margin-bottom: $mb;
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+  color: $c;
+  text-decoration: none;
+}
+
+@mixin unstyled-button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+@mixin responsive($miw) {
+  @media only screen and (min-width: $miw) {
+    @content;
+  }
+}

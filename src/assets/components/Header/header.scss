@@ -1,0 +1,24 @@
+@use "../../scss/mixins.scss" as m;
+
+.site-header {
+  padding-top: 23px;
+  padding-bottom: 24px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+}
+
+.site-header__inner {
+  @include m.flex-box;
+}
+
+.site-logo {
+  @include m.default-text-link($mb: 0, $fz: 24px, $fw: 800, $lh: normal);
+}
+
+.site-header__button {
+  @include m.flex-box($ai: flex-end);
+  gap: 8px;
+  @include m.unstyled-button;
+  font-weight: 600;
+  color: #111517;
+}
